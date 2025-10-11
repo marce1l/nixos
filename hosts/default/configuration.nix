@@ -121,6 +121,9 @@
     google-chrome
     ghostty
 
+    # needed for cgo
+    gcc
+
     gnumake
     git
 
