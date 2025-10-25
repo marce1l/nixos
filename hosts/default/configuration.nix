@@ -135,6 +135,7 @@
     nodejs_20
     go
     air
+    caddy
     golangci-lint
   ];
 
@@ -149,6 +150,11 @@
   networking.firewall.allowedTCPPorts = [
     8080
   ];
+
+  networking.extraHosts = ''
+    127.0.0.1 reservations.local
+    127.0.0.1 app.reservations.local
+  '';
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
