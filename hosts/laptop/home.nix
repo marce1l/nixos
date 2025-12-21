@@ -54,7 +54,7 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      nixbuild = "sudo nixos-rebuild switch --flake ~/nixos#default";
+      nixbuild = "sudo nixos-rebuild switch --flake ~/nixos#laptop";
     };
   };
 
