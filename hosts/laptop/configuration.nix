@@ -8,6 +8,9 @@
   ...
 }:
 
+# for touchpad gestures
+# https://github.com/bulletmark/libinput-gestures
+
 {
   imports = [
     # Include the results of the hardware scan.
@@ -25,6 +28,10 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -89,6 +96,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
     packages = [
       #  thunderbird
@@ -135,6 +143,9 @@
     air
     caddy
     golangci-lint
+
+    # windeurotrans
+    tailwindcss
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
