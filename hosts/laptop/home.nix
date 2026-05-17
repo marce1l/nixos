@@ -62,9 +62,11 @@
 
   programs.git = {
     enable = true;
-    userName = "marce1l";
-    userEmail = "mikesmarcell@gmail.com";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "marce1l";
+        email = "mikesmarcell@gmail.com";
+      };
       init.defaultBranch = "master";
       # commit.gpgsign = true;
       # gpg.format = "ssh";

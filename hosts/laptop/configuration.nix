@@ -133,12 +133,12 @@
     gnumake
     git
 
-    nixfmt-rfc-style
+    nixfmt
     nixd
 
     # reservations
     # probably should be separated
-    nodejs_20
+    nodejs_24
     go
     air
     caddy
