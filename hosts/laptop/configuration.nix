@@ -4,5 +4,5 @@
     ../../modules/common.nix
   ];
 
-  networking.hostName = "laptop";
+  networking.hostName = "nixos";
 }

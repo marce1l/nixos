@@ -15,14 +15,20 @@
     {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+          specialArgs = {
+            inherit inputs;
+            flakeHostName = "desktop";
+          };
           modules = [
             ./hosts/desktop/configuration.nix
           ];
         };
 
         laptop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+          specialArgs = {
+            inherit inputs;
+            flakeHostName = "laptop";
+          };
           modules = [
             ./hosts/laptop/configuration.nix
           ];
