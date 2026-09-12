@@ -139,6 +139,9 @@
     golangci-lint
 
     anydesk
+
+    t3code
+    codex
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
