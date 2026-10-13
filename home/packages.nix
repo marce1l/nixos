@@ -23,5 +23,7 @@
     anydesk
     t3code
     codex
+    claude-code
+    opencode
   ];
 }

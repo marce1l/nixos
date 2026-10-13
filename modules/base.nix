@@ -2,13 +2,19 @@
 
 {
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;
 
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.settings.nix-path = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
   nixpkgs.config.allowUnfree = true;
 
   time.timeZone = "Europe/Budapest";
