@@ -25,5 +25,6 @@
     codex
     claude-code
     opencode
+    python3
   ];
 }
