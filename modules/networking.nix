@@ -7,7 +7,7 @@
   ];
 
   networking.extraHosts = ''
-    127.0.0.1 reservations.local
-    127.0.0.1 app.reservations.local
+    127.0.0.1 reservations.miketsu.com
+    127.0.0.1 app.reservations.miketsu.com
   '';
 }
